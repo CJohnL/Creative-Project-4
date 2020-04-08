@@ -3,7 +3,7 @@
     <div class="file" v-for="item in items" :key="item.id">
         <button @click="remove(item)">X</button>
         <button @click="rename(item)">Rename</button>
-        <button><a :href="item.path" download>Download</a></button>
+        <button><a :href="item.path" download="item.title">Download</a></button>
         <div class="editItem" v-if="item === findItem">
           <input type="text" id="editText" :value="item.title">
           <button @click="save(item)">Save</button>
@@ -39,7 +39,7 @@ export default {
         this.items = response.data;
         return true;
       } catch (error) {
-        console.log(error);
+        //console.log(error);
       }
     },
     rename(item){
@@ -52,7 +52,7 @@ export default {
         this.getItems();
         return true;
       } catch (error) {
-        console.log(error);
+        //console.log(error);
       }
     },
     async save(item) {
@@ -65,7 +65,7 @@ export default {
         this.getItems();
         return true;
       } catch (error) {
-        console.log(error);
+        //console.log(error);
       }
     },
   }

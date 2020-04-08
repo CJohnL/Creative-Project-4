@@ -12,9 +12,9 @@
     <p>Like Box or Google Drive, only simpler! :D</p>
     <router-view />
   </div>
-  <div class="footer">
-    
-  </div>
+  <footer>
+    <p>GitHub: <a href=https://github.com/CJohnL/Creative-Project-4>Creative-Project-4</a></p>
+  </footer>
 </div>
 </template>
 
@@ -70,15 +70,18 @@ body {
   min-height: 500px;
 }
 
-/* Footer */
-.footer {
-  height: 50px;
-  padding: 20px 100px 0px 100px;
-  background: #f7f7f7;
-  font-size: 12px;
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f7f7f7;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.footer a {
+footer a {
   color: #000;
 }
 
