@@ -3,7 +3,7 @@
     <div class="file" v-for="item in items" :key="item.id">
         <button @click="remove(item)">X</button>
         <button @click="rename(item)">Rename</button>
-        <button><a :href="item.path" download="item.title">Download</a></button>
+        <button><a :href="item.path" :download="item.title">Download</a></button>
         <div class="editItem" v-if="item === findItem">
           <input type="text" id="editText" :value="item.title">
           <button @click="save(item)">Save</button>
@@ -12,8 +12,6 @@
           <p class="title">{{item.title}}</p>
         </div>
     </div>
-
-    <div></div>
 </div>
 </template>
 

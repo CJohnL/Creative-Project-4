@@ -4,12 +4,13 @@
       <h1>The Upload Page!</h1>
     <div class="heading">
       <h2>Add an Item</h2>
+      <p>(be sure to include the file-type, like ".txt" at the end of the file name)</p>
     </div>
     <div class="add">
       <div class="form">
         <input v-model="title" placeholder="File Name">
         <p></p>
-        <input type="file" name="photo" @change="fileChanged">
+        <input type="file" name="file" @change="fileChanged">
         
         <button @click="upload">Upload</button>
       </div>
